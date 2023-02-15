@@ -1,0 +1,60 @@
+.container{
+   min-height: 90vh;
+   position: relative;
+}
+
+.text{
+   position: absolute;
+   left: 0%;
+   height: 100%;
+   transition: left 1s;
+}
+
+.image__container{
+   position: absolute;
+   left: 50%;
+   z-index: 10;
+   transition: left 1s;
+}
+.icon{
+   width: 40px;
+   height: 60%;
+   
+}
+#signUp,#signIn{
+   cursor: pointer;
+}
+.form-control{
+   
+   all: unset;
+   width: 100% !important;
+   border: none;
+   border-bottom: 1px solid rgba(141, 140, 140, 0.514) !important ;
+   transition: border-color 150ms linear ;
+   
+}
+.form-control.is-valid, .was-validated .form-control:valid,.form-control.is-invalid, .was-invalidated .form-control:invalid{
+   padding-right: 0px !important;
+}
+.form-control:focus{
+   outline: none !important;
+   box-shadow: none !important;
+  
+}
+
+input{
+   border: none;
+   border-bottom: 1px solid rgba(141, 140, 140, 0.514);
+   transition: border-color 150ms linear ;
+   
+}
+input:focus{
+   outline: none;
+}
+Label{
+   transition: transform 150ms ease-out, font-size 150ms ease-out, font-weight 150ms ease-out ;
+}
+/* .btn{
+   /* color: rgba(238, 238, 238,1);
+   background-color: rgba(0, 0, 0,.9); */
+
