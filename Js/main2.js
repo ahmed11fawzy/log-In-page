@@ -37,34 +37,29 @@ logInBtn.addEventListener('click',function(e){
    }
    else if(e.target.innerText=='Sign In'){
 
-      findMail()
-      /* if(usersContainer.includes(userMail.value)){
-            console.log('gmail is find')
-            for(let i=0; i<usersContainer.length;i++){
-                  if(userMail.value==usersContainer[i].mail && userPassword.value==usersContainer[i].pass){
+      for(let i=0; i<usersContainer.length;i++){
+         if(usersContainer[i].mail.includes(userMail.value)){
+               
+               console.log('gmail is find')
+               if(userMail.value==usersContainer[i].mail && userPassword.value==usersContainer[i].pass){
                   alert('hi'+usersContainer[i].name);
-                  }
+                  break;
+               }
                else{
                   alert('Wrong password')
                }
             }
-            
-         }
-      else{
+
+            else{
                alert('mail is not find ')
-         }  */  
+            }    
+         }
+      
       
    }
    
 })
-function findMail(){
-   if(usersContainer.includes(userMail.value)){
-      console.log('is founded');
-   }
-   else{
-      console.log("isn't found")
-   }
-}
+
 
 function emptyFields(){
    userName.value=null;
