@@ -2,9 +2,10 @@ let userName=document.querySelector('#inpName'),
    userMail=document.querySelector('#inpEmail'),
    userPassword=document.querySelector('#inpPass'),
    logInBtn=document.querySelector('#signBtn');
+   welcomeHeader=document.querySelector('#page2Header')
 let user={},
     usersContainer=[];
-
+    
 /* get saved data */
 (function() {
    if(localStorage.getItem('logInUsers')==null){
@@ -13,9 +14,14 @@ let user={},
    else{
       usersContainer=JSON.parse(localStorage.getItem('logInUsers')) ;
       console.log(usersContainer);
+     
+
    }
    
 })()
+
+
+
 function addUserData(){
   
       user={
@@ -23,10 +29,13 @@ function addUserData(){
          mail:userMail.value,
          pass:userPassword.value,
       }
-      logInBtn.setAttribute('href','./test.html')
-   
+      
+      
    usersContainer.push(user);
+       
    localStorage.setItem('logInUsers',JSON.stringify(usersContainer))
+   
+   logInBtn.setAttribute('href','./test.html')
    emptyFields()
    console.log(user);
    console.log(usersContainer);
@@ -43,16 +52,16 @@ logInBtn.addEventListener('click',function(e){
                console.log('gmail is find')
                if(userMail.value==usersContainer[i].mail && userPassword.value==usersContainer[i].pass){
                   alert('hi'+usersContainer[i].name);
-                  break;
+                  
+                  
                }
                else{
-                  alert('Wrong password')
+                  alert('Wrong mail or  password  ')
                }
             }
-
-            else{
-               alert('mail is not find ')
-            }    
+            
+            
+              
          }
       
       
